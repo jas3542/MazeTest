@@ -1,0 +1,7 @@
+C:\gitProjects\MazeTest\MazeTest\bin\Debug\MazeTest.exe.config
+C:\gitProjects\MazeTest\MazeTest\bin\Debug\MazeTest.exe
+C:\gitProjects\MazeTest\MazeTest\bin\Debug\MazeTest.pdb
+C:\gitProjects\MazeTest\MazeTest\obj\Debug\MazeTest.csproj.CoreCompileInputs.cache
+C:\gitProjects\MazeTest\MazeTest\obj\Debug\MazeTest.exe
+C:\gitProjects\MazeTest\MazeTest\obj\Debug\MazeTest.pdb
+C:\gitProjects\MazeTest\MazeTest\obj\Debug\MazeTest.csprojAssemblyReference.cache
