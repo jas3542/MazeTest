@@ -29,6 +29,11 @@ namespace MazeTest
                     if (x == maze._startX && y == maze._startY)
                     {
                         Console.Write("S");
+
+                        // TODO Find the path to End
+
+                        PathFinder pathFinder = new PathFinder();
+                        pathFinder.FindPath(maze);
                     }
 
                     // check for the end point
@@ -46,14 +51,7 @@ namespace MazeTest
                     else if (maze._unsolvedMaze[x, y] == "0")
                     {
                        Console.Write(" ");
-                        // TODO Find the path to End
-
-                        PathFinder pathFinder = new PathFinder();
-                        pathFinder.FindPath(maze);
-
-
-
-
+                        
                     }
                     else
                     {

@@ -16,12 +16,12 @@ namespace MazeTest
             _maze = mazee;
             _visited = new List<int[,]>();
 
-            int[,] item = new int[, ] 
+            int[,] startPoint = new int[, ] 
             { 
                 { _maze._startX, _maze._startY }
             };
 
-            _visited.Add(item);
+            _visited.Add(startPoint);
 
             //Check around to see where we can go.
             checkAround();
@@ -31,24 +31,28 @@ namespace MazeTest
         private void checkAround()
         {
             // TOP  TODO: checkif there is something there (wall, etc...)
-            if (_maze._unsolvedMaze[_maze._startX,(_maze._startY - 1)] != null)
+            if (_maze._unsolvedMaze[_maze._startX,(_maze._startY - 1)] != null 
+                && _maze._unsolvedMaze[_maze._startX, (_maze._startY - 1)] != "1")
             {
-
+                //Console.WriteLine("1- " + _maze._startX + "," + (_maze._startY - 1));
             }
             // RIGHT
-            if (_maze._unsolvedMaze[(_maze._startX + 1), _maze._startY] != null)
+            if (_maze._unsolvedMaze[(_maze._startX + 1), _maze._startY] != null
+                && _maze._unsolvedMaze[(_maze._startX + 1), _maze._startY] != "1")
             {
-
+                //Console.WriteLine("2- " + (_maze._startX + 1) + "," + _maze._startY);
             }
             // DOWN
-            if (_maze._unsolvedMaze[(_maze._startX + 1), _maze._startY] != null)
+            if (_maze._unsolvedMaze[_maze._startX , (_maze._startY + 1)] != null
+                && _maze._unsolvedMaze[_maze._startX, (_maze._startY + 1)] != "1")
             {
-
+                //Console.WriteLine("3- " + _maze._startX + "," + (_maze._startY + 1));
             }
             // LEFT
-            if (_maze._unsolvedMaze[(_maze._startX - 1), _maze._startY] != null)
+            if (_maze._unsolvedMaze[(_maze._startX - 1), _maze._startY] != null
+                && _maze._unsolvedMaze[(_maze._startX - 1), _maze._startY] != "1")
             {
-
+                //Console.WriteLine("4- " + (_maze._startX - 1) + "," + _maze._startY);
             }
         }
     }
