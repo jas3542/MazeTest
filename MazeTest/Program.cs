@@ -18,6 +18,8 @@ namespace MazeTest
             fileUtility.readFile(out maze);
             
             
+
+
             // printing the maze
             for (int x = 0; x < maze._unsolvedMaze.GetLength(0); x++)
             {
@@ -43,27 +45,29 @@ namespace MazeTest
                     // passage
                     else if (maze._unsolvedMaze[x, y] == "0")
                     {
-                        Console.Write("*");
+                       Console.Write(" ");
+                        // TODO Find the path to End
+
+                        PathFinder pathFinder = new PathFinder();
+                        pathFinder.FindPath(maze);
+
+
+
+
                     }
                     else
                     {
                         Console.Write(maze._unsolvedMaze[x, y]);
+                        
                     }
 
                 }
                 Console.Write("\n");
             }
             
-
-
-
-
-
-
-
-
-
-             Console.WriteLine("test");
+    
+            
+            Console.ReadLine();
         }
 
         
